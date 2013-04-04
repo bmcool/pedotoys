@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PedoMoneyView : UIView
+@interface MoneyView : UIView
+
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 
 @end
 
-@interface _PedoMoneyView : PedoMoneyView
+@interface _MoneyView : MoneyView
 
 @end

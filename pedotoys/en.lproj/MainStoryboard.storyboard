@@ -192,7 +192,7 @@
                                     <segue destination="Bu6-vF-NwJ" kind="modal" id="Hg1-sL-TwK"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="oX5-1U-LLt" customClass="_PedoMoneyView">
+                            <view contentMode="scaleToFill" id="oX5-1U-LLt" customClass="_MoneyView">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="52"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -214,6 +214,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                                <connections>
+                                    <outlet property="moneyLabel" destination="CLd-uo-zvE" id="pX6-tu-IZd"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" id="6jw-fR-WcJ" customClass="_StepView">
                                 <rect key="frame" x="160" y="0.0" width="160" height="52"/>
@@ -237,6 +240,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                                <connections>
+                                    <outlet property="stepLabel" destination="CYr-Hd-hrW" id="IsT-1y-bm1"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -263,7 +269,7 @@
                                 <rect key="frame" x="0.0" y="52" width="320" height="496"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="xGM-iC-LSY" customClass="_PedoMoneyView">
+                            <view contentMode="scaleToFill" id="xGM-iC-LSY" customClass="_MoneyView">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="52"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -285,6 +291,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                                <connections>
+                                    <outlet property="moneyLabel" destination="ukC-Xe-naA" id="K28-K1-cef"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" id="59l-6P-e91" customClass="_StepView">
                                 <rect key="frame" x="160" y="0.0" width="160" height="52"/>
@@ -308,6 +317,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                                <connections>
+                                    <outlet property="stepLabel" destination="HEl-Dc-Uzv" id="nby-yY-i4L"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ctL-73-vDp">
                                 <rect key="frame" x="250" y="485" width="50" height="44"/>
@@ -498,16 +510,18 @@
         <image name="weather_widget.png" width="530" height="320"/>
     </resources>
     <classes>
+        <class className="MoneyView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoneyView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="moneyLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="MotionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MotionViewController.h"/>
-        </class>
-        <class className="PedoMoneyView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PedoMoneyView.h"/>
         </class>
         <class className="PedometerViewController" superclassName="ShakeViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PedometerViewController.h"/>
             <relationships>
-                <relationship kind="action" name="stop:"/>
                 <relationship kind="outlet" name="shakeCountLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -516,6 +530,9 @@
         </class>
         <class className="StepView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StepView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
@@ -538,8 +555,8 @@
                 <relationship kind="outlet" name="weatherLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="_PedoMoneyView" superclassName="PedoMoneyView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/_PedoMoneyView.h"/>
+        <class className="_MoneyView" superclassName="MoneyView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/_MoneyView.h"/>
         </class>
         <class className="_StepView" superclassName="StepView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/_StepView.h"/>

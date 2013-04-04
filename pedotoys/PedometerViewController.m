@@ -7,6 +7,8 @@
 //
 
 #import "PedometerViewController.h"
+#import "Money.h"
+#import "Step.h"
 
 @interface PedometerViewController ()
 
@@ -33,6 +35,9 @@
 -(void) incrShakeCount
 {
     [super incrShakeCount];
+    
+    [[Money sharedInstance] incr:1];
+    [[Step sharedInstance] incr:1];
     
     [self.shakeCountLabel setText:[NSString stringWithFormat:@"%d", self.shakeCount]];
 }

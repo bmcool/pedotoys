@@ -10,6 +10,7 @@
 
 @interface StepView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *stepLabel;
 @end
 
 @interface _StepView : StepView
