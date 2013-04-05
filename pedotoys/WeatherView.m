@@ -21,19 +21,37 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.weatherIconImageView setImage:openWeatherMap.station.weather.iconImage];
-    
-    [self.weatherLabel setText:openWeatherMap.station.weather.description];
-    [self.tempCLabel setText:[NSString stringWithFormat:@"%.1fC", openWeatherMap.station.tempC]];
-    [self.tempFLabel setText:[NSString stringWithFormat:@"%.1fF", openWeatherMap.station.tempF]];
-    [self.cityLabel setText:openWeatherMap.station.city];
-    
+    [self updateLabels];
     [self updateTime];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLabels) name:EventWeatherChanged object:nil];
+    
     timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+}
+
+- (void)updateLabels
+{
+    if ([openWeatherMap hasData]) {
+        [self.weatherIconImageView setImage:openWeatherMap.station.weather.iconImage];
+        
+        [self.weatherLabel setText:openWeatherMap.station.weather.description];
+        [self.tempCLabel setText:[NSString stringWithFormat:@"%.1fC", openWeatherMap.station.tempC]];
+        [self.tempFLabel setText:[NSString stringWithFormat:@"%.1fF", openWeatherMap.station.tempF]];
+        [self.cityLabel setText:openWeatherMap.station.city];
+    } else {
+        [self.weatherIconImageView setImage:openWeatherMap.station.weather.iconImage];
+        
+        [self.weatherLabel setText:@"Loading.."];
+        [self.tempCLabel setText:@"Loading.."];
+        [self.tempFLabel setText:@"Loading.."];
+        [self.cityLabel setText:@"Loading.."];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     [timer invalidate];
     timer = nil;
 }

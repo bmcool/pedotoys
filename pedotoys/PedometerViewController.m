@@ -7,8 +7,9 @@
 //
 
 #import "PedometerViewController.h"
-#import "Money.h"
-#import "Step.h"
+#import "PedoData.h"
+
+#import "AudioToolkit.h"
 
 @interface PedometerViewController ()
 
@@ -20,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -30,27 +31,57 @@
     [super viewDidLoad];
     
 	[self.shakeCountLabel setText:[NSString stringWithFormat:@"%d", self.shakeCount]];
+    [self.chanceLabel setText:[NSString stringWithFormat:@"%d", [[PedoData sharedInstance] chance]]];
 }
 
 -(void) incrShakeCount
 {
     [super incrShakeCount];
     
-    [[Money sharedInstance] incr:1];
-    [[Step sharedInstance] incr:1];
+    // 1 ~ 100
+    NSInteger randomNum = ((float)rand() / RAND_MAX) * 100 + 1;
     
+    NSInteger chance = [[PedoData sharedInstance] chance] + self.shakeCount / 100;
+    if (chance > 100) {
+        chance = 100;
+    }
+    
+    if (randomNum <= chance) {
+        [[PedoData sharedInstance] incrMoney:1];
+        [AudioToolkit playSound:@"coin_get" ofType:@"mp3"];
+    }
+    [[PedoData sharedInstance] incrStep:1];
+    
+    [self.chanceLabel setText:[NSString stringWithFormat:@"%d", chance]];
     [self.shakeCountLabel setText:[NSString stringWithFormat:@"%d", self.shakeCount]];
 }
 
 -(IBAction)stop:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    [alert show];
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark - Debug methods
+
+- (IBAction)getMoney:(id)sender
+{
+    [[PedoData sharedInstance] incrMoney:100];
+    [AudioToolkit playSound:@"coin_get" ofType:@"mp3"];
 }
 
 @end

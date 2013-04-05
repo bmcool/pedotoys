@@ -1,13 +1,16 @@
-Money icons :
-    Search By : http://www.iconfinder.com/
-    Designer : http://www.iconeden.com/
 
 
-Background images :
-    Search By : http://subtlepatterns.com/
+Icons
+    - http://www.iconfinder.com/
+    - http://www.iconeden.com/
+    - http://icons.mysitemyway.com/
+    - http://www.icons-land.com
 
-Other Icons :
-    http://icons.mysitemyway.com/
+Background images
+    - http://subtlepatterns.com/
 
-Weather Service :
-    http://openweathermap.org/
+Weather Service
+    - http://openweathermap.org/
+
+Sounds
+    - http://www.soundjay.com/

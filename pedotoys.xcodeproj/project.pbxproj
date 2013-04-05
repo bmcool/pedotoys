@@ -41,7 +41,6 @@
 		7969FB84170DE53E005224DE /* coin@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 7969FB81170DE53E005224DE /* coin@2X.png */; };
 		7969FB86170DED78005224DE /* step_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7969FB85170DED78005224DE /* step_bg.png */; };
 		7969FB89170DEF3E005224DE /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FB88170DEF3E005224DE /* PedometerViewController.m */; };
-		7969FB8D170DF4F0005224DE /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FB8C170DF4F0005224DE /* Money.m */; };
 		7969FBA1170DFB35005224DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7969FB9F170DFB35005224DE /* InfoPlist.strings */; };
 		7969FBA4170DFB41005224DE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7969FBA2170DFB41005224DE /* MainStoryboard.storyboard */; };
 		7969FBCC170DFBB7005224DE /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBAC170DFBB7005224DE /* Http.m */; };
@@ -60,9 +59,22 @@
 		7969FBD9170DFBB7005224DE /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBC7170DFBB7005224DE /* UIView+Addition.m */; };
 		7969FBDA170DFBB7005224DE /* UIViewController+StoryboardExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBC9170DFBB7005224DE /* UIViewController+StoryboardExtend.m */; };
 		7969FBDB170DFBB7005224DE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBCB170DFBB7005224DE /* Weather.m */; };
-		7969FBDE170E05ED005224DE /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBDD170E05ED005224DE /* Step.m */; };
 		7969FBE4170E0707005224DE /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBE3170E0707005224DE /* BaseModel.m */; };
 		7969FBED170E1E3B005224DE /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7969FBEC170E1E3B005224DE /* Defaults.plist */; };
+		79909A5C170EA45A0056CD96 /* step_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A5B170EA45A0056CD96 /* step_stop.png */; };
+		79909A63170EBB5D0056CD96 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A62170EBB5D0056CD96 /* finger.png */; };
+		79909A68170EC6770056CD96 /* PekoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A67170EC6770056CD96 /* PekoViewController.m */; };
+		79909A72170ED5D90056CD96 /* question_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A71170ED5D90056CD96 /* question_done.png */; };
+		79909A74170ED6530056CD96 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A73170ED6530056CD96 /* question.png */; };
+		79909A7A170F000B0056CD96 /* ToyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79909A79170F000B0056CD96 /* ToyView.xib */; };
+		79909A7C170F075D0056CD96 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A7B170F075D0056CD96 /* close.png */; };
+		79909A7F170F08280056CD96 /* ToyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A7E170F08280056CD96 /* ToyView.m */; };
+		79909A81170F0C320056CD96 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79909A80170F0C320056CD96 /* AudioToolbox.framework */; };
+		79909A8B170F0DAE0056CD96 /* AudioToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A8A170F0DAE0056CD96 /* AudioToolkit.m */; };
+		79909A8F170F0DF40056CD96 /* coin_get.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79909A8E170F0DF40056CD96 /* coin_get.mp3 */; };
+		79909A9C170F1CEF0056CD96 /* PedoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A9B170F1CEF0056CD96 /* PedoData.m */; };
+		79909A9E170F263C0056CD96 /* coin_spend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9D170F263C0056CD96 /* coin_spend.mp3 */; };
+		79909AA0170F2B940056CD96 /* step_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9F170F2B940056CD96 /* step_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,8 +122,6 @@
 		7969FB85170DED78005224DE /* step_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_bg.png; sourceTree = "<group>"; };
 		7969FB87170DEF3E005224DE /* PedometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerViewController.h; sourceTree = "<group>"; };
 		7969FB88170DEF3E005224DE /* PedometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
-		7969FB8B170DF4F0005224DE /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
-		7969FB8C170DF4F0005224DE /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		7969FBA0170DFB35005224DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7969FBA3170DFB41005224DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7969FBAB170DFBB7005224DE /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
@@ -147,11 +157,27 @@
 		7969FBC9170DFBB7005224DE /* UIViewController+StoryboardExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StoryboardExtend.m"; sourceTree = "<group>"; };
 		7969FBCA170DFBB7005224DE /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		7969FBCB170DFBB7005224DE /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
-		7969FBDC170E05ED005224DE /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
-		7969FBDD170E05ED005224DE /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
 		7969FBE2170E0707005224DE /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		7969FBE3170E0707005224DE /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		7969FBEC170E1E3B005224DE /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		79909A5B170EA45A0056CD96 /* step_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_stop.png; sourceTree = "<group>"; };
+		79909A62170EBB5D0056CD96 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger.png; sourceTree = "<group>"; };
+		79909A66170EC6770056CD96 /* PekoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PekoViewController.h; sourceTree = "<group>"; };
+		79909A67170EC6770056CD96 /* PekoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PekoViewController.m; sourceTree = "<group>"; };
+		79909A71170ED5D90056CD96 /* question_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question_done.png; sourceTree = "<group>"; };
+		79909A73170ED6530056CD96 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		79909A79170F000B0056CD96 /* ToyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToyView.xib; sourceTree = "<group>"; };
+		79909A7B170F075D0056CD96 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		79909A7D170F08280056CD96 /* ToyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToyView.h; sourceTree = "<group>"; };
+		79909A7E170F08280056CD96 /* ToyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToyView.m; sourceTree = "<group>"; };
+		79909A80170F0C320056CD96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		79909A89170F0DAE0056CD96 /* AudioToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolkit.h; sourceTree = "<group>"; };
+		79909A8A170F0DAE0056CD96 /* AudioToolkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolkit.m; sourceTree = "<group>"; };
+		79909A8E170F0DF40056CD96 /* coin_get.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin_get.mp3; sourceTree = "<group>"; };
+		79909A9A170F1CEF0056CD96 /* PedoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedoData.h; sourceTree = "<group>"; };
+		79909A9B170F1CEF0056CD96 /* PedoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoData.m; sourceTree = "<group>"; };
+		79909A9D170F263C0056CD96 /* coin_spend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin_spend.mp3; sourceTree = "<group>"; };
+		79909A9F170F2B940056CD96 /* step_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79909A81170F0C320056CD96 /* AudioToolbox.framework in Frameworks */,
 				7969FB46170D8EA5005224DE /* CoreLocation.framework in Frameworks */,
 				7969FB44170D8E9A005224DE /* CoreMotion.framework in Frameworks */,
 				7969F7B4170D502A005224DE /* UIKit.framework in Frameworks */,
@@ -192,6 +219,7 @@
 		7969F7B2170D502A005224DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79909A80170F0C320056CD96 /* AudioToolbox.framework */,
 				7969FB45170D8EA5005224DE /* CoreLocation.framework */,
 				7969FB43170D8E9A005224DE /* CoreMotion.framework */,
 				7969F7B3170D502A005224DE /* UIKit.framework */,
@@ -236,6 +264,7 @@
 		7969FB29170D8557005224DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79909A75170EE03B0056CD96 /* ToyView */,
 				7969FBEB170E1D64005224DE /* StepView */,
 				7969FBE9170E1D56005224DE /* MoneyView */,
 				7969FB75170DB4C2005224DE /* WeatherView */,
@@ -246,9 +275,8 @@
 		7969FB3E170D8DE1005224DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7969FB55170D9B80005224DE /* step.png */,
-				7969FB4C170D9406005224DE /* Background */,
-				7969FB4B170D9400005224DE /* Money */,
+				79909A8D170F0DD90056CD96 /* Images */,
+				79909A8C170F0DCC0056CD96 /* Sounds */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -285,6 +313,8 @@
 			children = (
 				7969FB87170DEF3E005224DE /* PedometerViewController.h */,
 				7969FB88170DEF3E005224DE /* PedometerViewController.m */,
+				79909A66170EC6770056CD96 /* PekoViewController.h */,
+				79909A67170EC6770056CD96 /* PekoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -304,12 +334,10 @@
 		7969FB8A170DF4BE005224DE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7969FB8B170DF4F0005224DE /* Money.h */,
-				7969FB8C170DF4F0005224DE /* Money.m */,
-				7969FBDC170E05ED005224DE /* Step.h */,
-				7969FBDD170E05ED005224DE /* Step.m */,
 				7969FBE2170E0707005224DE /* BaseModel.h */,
 				7969FBE3170E0707005224DE /* BaseModel.m */,
+				79909A9A170F1CEF0056CD96 /* PedoData.h */,
+				79909A9B170F1CEF0056CD96 /* PedoData.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -317,6 +345,8 @@
 		7969FBAA170DFBB7005224DE /* ios-module */ = {
 			isa = PBXGroup;
 			children = (
+				79909A89170F0DAE0056CD96 /* AudioToolkit.h */,
+				79909A8A170F0DAE0056CD96 /* AudioToolkit.m */,
 				7969FBAB170DFBB7005224DE /* Http.h */,
 				7969FBAC170DFBB7005224DE /* Http.m */,
 				7969FBAD170DFBB7005224DE /* ios-module-Prefix.pch */,
@@ -373,6 +403,41 @@
 				7969FB57170D9BEB005224DE /* StepView.xib */,
 			);
 			name = StepView;
+			sourceTree = "<group>";
+		};
+		79909A75170EE03B0056CD96 /* ToyView */ = {
+			isa = PBXGroup;
+			children = (
+				79909A79170F000B0056CD96 /* ToyView.xib */,
+				79909A7D170F08280056CD96 /* ToyView.h */,
+				79909A7E170F08280056CD96 /* ToyView.m */,
+			);
+			name = ToyView;
+			sourceTree = "<group>";
+		};
+		79909A8C170F0DCC0056CD96 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				79909A9D170F263C0056CD96 /* coin_spend.mp3 */,
+				79909A8E170F0DF40056CD96 /* coin_get.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		79909A8D170F0DD90056CD96 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				79909A9F170F2B940056CD96 /* step_icon.png */,
+				79909A7B170F075D0056CD96 /* close.png */,
+				79909A73170ED6530056CD96 /* question.png */,
+				79909A71170ED5D90056CD96 /* question_done.png */,
+				79909A62170EBB5D0056CD96 /* finger.png */,
+				79909A5B170EA45A0056CD96 /* step_stop.png */,
+				7969FB55170D9B80005224DE /* step.png */,
+				7969FB4C170D9406005224DE /* Background */,
+				7969FB4B170D9400005224DE /* Money */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +515,15 @@
 				7969FBA1170DFB35005224DE /* InfoPlist.strings in Resources */,
 				7969FBA4170DFB41005224DE /* MainStoryboard.storyboard in Resources */,
 				7969FBED170E1E3B005224DE /* Defaults.plist in Resources */,
+				79909A5C170EA45A0056CD96 /* step_stop.png in Resources */,
+				79909A63170EBB5D0056CD96 /* finger.png in Resources */,
+				79909A72170ED5D90056CD96 /* question_done.png in Resources */,
+				79909A74170ED6530056CD96 /* question.png in Resources */,
+				79909A7A170F000B0056CD96 /* ToyView.xib in Resources */,
+				79909A7C170F075D0056CD96 /* close.png in Resources */,
+				79909A8F170F0DF40056CD96 /* coin_get.mp3 in Resources */,
+				79909A9E170F263C0056CD96 /* coin_spend.mp3 in Resources */,
+				79909AA0170F2B940056CD96 /* step_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +542,6 @@
 				7969FB70170DB06E005224DE /* WeatherView.m in Sources */,
 				7969FB78170DB4E0005224DE /* UIViewController+WeatherView.m in Sources */,
 				7969FB89170DEF3E005224DE /* PedometerViewController.m in Sources */,
-				7969FB8D170DF4F0005224DE /* Money.m in Sources */,
 				7969FBCC170DFBB7005224DE /* Http.m in Sources */,
 				7969FBCD170DFBB7005224DE /* ios_module.m in Sources */,
 				7969FBCE170DFBB7005224DE /* JSONKit.m in Sources */,
@@ -485,8 +558,11 @@
 				7969FBD9170DFBB7005224DE /* UIView+Addition.m in Sources */,
 				7969FBDA170DFBB7005224DE /* UIViewController+StoryboardExtend.m in Sources */,
 				7969FBDB170DFBB7005224DE /* Weather.m in Sources */,
-				7969FBDE170E05ED005224DE /* Step.m in Sources */,
 				7969FBE4170E0707005224DE /* BaseModel.m in Sources */,
+				79909A68170EC6770056CD96 /* PekoViewController.m in Sources */,
+				79909A7F170F08280056CD96 /* ToyView.m in Sources */,
+				79909A8B170F0DAE0056CD96 /* AudioToolkit.m in Sources */,
+				79909A9C170F1CEF0056CD96 /* PedoData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

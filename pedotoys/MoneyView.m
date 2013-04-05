@@ -8,7 +8,7 @@
 
 #import "MoneyView.h"
 
-#import "Money.h"
+#import "PedoData.h"
 
 @implementation MoneyView
 
@@ -18,7 +18,7 @@
 
 - (void) updateLabels
 {
-    [self.moneyLabel setText:[NSString stringWithFormat:@"%d", [[Money sharedInstance] money]]];
+    [self.moneyLabel setText:[NSString stringWithFormat:@"%d", [[PedoData sharedInstance] money]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

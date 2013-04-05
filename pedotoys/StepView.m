@@ -8,7 +8,7 @@
 
 #import "StepView.h"
 
-#import "Step.h"
+#import "PedoData.h"
 
 @implementation StepView
 
@@ -19,7 +19,7 @@
 
 - (void) updateLabels
 {
-    [self.stepLabel setText:[NSString stringWithFormat:@"%d", [[Step sharedInstance] step]]];
+    [self.stepLabel setText:[NSString stringWithFormat:@"%d", [[PedoData sharedInstance] step]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
