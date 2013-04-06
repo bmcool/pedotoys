@@ -32,7 +32,34 @@
 - (void)updateLabels
 {
     if ([openWeatherMap hasData]) {
-        [self.weatherIconImageView setImage:openWeatherMap.station.weather.iconImage];
+        UIImage *iconImage;
+        NSString *icon = openWeatherMap.station.weather.icon;
+        if ([icon isEqualToString:@"03d"] ||
+            [icon isEqualToString:@"03n"] ||
+            [icon isEqualToString:@"04d"] ||
+            [icon isEqualToString:@"04n"]) {
+            iconImage = [UIImage imageNamed:@"0304"];
+        
+        } else if ([icon isEqualToString:@"09d"] ||
+                   [icon isEqualToString:@"09n"]) {
+            iconImage = [UIImage imageNamed:@"09"];
+        
+        } else if ([icon isEqualToString:@"11d"] ||
+                   [icon isEqualToString:@"11n"]) {
+            iconImage = [UIImage imageNamed:@"11"];
+            
+        } else if ([icon isEqualToString:@"13d"] ||
+                   [icon isEqualToString:@"13n"]) {
+            iconImage = [UIImage imageNamed:@"13"];
+            
+        } else if ([icon isEqualToString:@"50d"] ||
+                   [icon isEqualToString:@"50n"]) {
+            iconImage = [UIImage imageNamed:@"50"];
+        
+        } else {
+            iconImage = [UIImage imageNamed:icon];
+        }
+        [self.weatherIconImageView setImage:iconImage];
         
         [self.weatherLabel setText:openWeatherMap.station.weather.description];
         [self.tempCLabel setText:[NSString stringWithFormat:@"%.1fC", openWeatherMap.station.tempC]];

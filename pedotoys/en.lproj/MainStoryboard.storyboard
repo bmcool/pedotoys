@@ -103,7 +103,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="khS-3U-5Wb">
-                                        <rect key="frame" x="76" y="49" width="128" height="128"/>
+                                        <rect key="frame" x="90" y="49" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32h-ys-RwI">
@@ -721,6 +721,68 @@
         <image name="weather_background.png" width="530" height="320"/>
         <image name="weather_widget.png" width="530" height="320"/>
     </resources>
+    <classes>
+        <class className="MoneyView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoneyView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="moneyLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MotionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MotionViewController.h"/>
+        </class>
+        <class className="PedometerViewController" superclassName="ShakeViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PedometerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="getMoney:"/>
+                <relationship kind="action" name="stop:"/>
+                <relationship kind="outlet" name="chanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shakeCountLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PekoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PekoViewController.h"/>
+        </class>
+        <class className="ShakeViewController" superclassName="MotionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShakeViewController.h"/>
+        </class>
+        <class className="StepView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="weatherView" candidateClass="WeatherView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="WeatherView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeatherView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tempCLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tempFLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weatherIconImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="weatherLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="_MoneyView" superclassName="MoneyView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/_MoneyView.h"/>
+        </class>
+        <class className="_StepView" superclassName="StepView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/_StepView.h"/>
+        </class>
+        <class className="_WeatherView" superclassName="WeatherView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/_WeatherView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
