@@ -18,7 +18,10 @@
 		792BFCBC17101BC10085A306 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 792BFCBB17101BC10085A306 /* 11.png */; };
 		792BFCBF17101DB10085A306 /* 09.png in Resources */ = {isa = PBXBuildFile; fileRef = 792BFCBD17101DB00085A306 /* 09.png */; };
 		792BFCC017101DB10085A306 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 792BFCBE17101DB10085A306 /* 13.png */; };
-		792BFCC41710238C0085A306 /* Items in Resources */ = {isa = PBXBuildFile; fileRef = 792BFCC31710238C0085A306 /* Items */; };
+		792BFCCB17102AC20085A306 /* ToyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BFCCA17102AC20085A306 /* ToyCenter.m */; };
+		792BFCCD17102C2F0085A306 /* Toys in Resources */ = {isa = PBXBuildFile; fileRef = 792BFCCC17102C2F0085A306 /* Toys */; };
+		792BFCD41710317F0085A306 /* Toy.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BFCD31710317F0085A306 /* Toy.m */; };
+		792BFCDF171036110085A306 /* NSObject+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BFCDE171036110085A306 /* NSObject+JSONKit.m */; };
 		7969F7B4170D502A005224DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969F7B3170D502A005224DE /* UIKit.framework */; };
 		7969F7B6170D502A005224DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969F7B5170D502A005224DE /* Foundation.framework */; };
 		7969F7B8170D502A005224DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969F7B7170D502A005224DE /* CoreGraphics.framework */; };
@@ -101,7 +104,13 @@
 		792BFCBB17101BC10085A306 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		792BFCBD17101DB00085A306 /* 09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 09.png; sourceTree = "<group>"; };
 		792BFCBE17101DB10085A306 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
-		792BFCC31710238C0085A306 /* Items */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Items; sourceTree = "<group>"; };
+		792BFCC917102AC20085A306 /* ToyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToyCenter.h; sourceTree = "<group>"; };
+		792BFCCA17102AC20085A306 /* ToyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToyCenter.m; sourceTree = "<group>"; };
+		792BFCCC17102C2F0085A306 /* Toys */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Toys; sourceTree = "<group>"; };
+		792BFCD21710317F0085A306 /* Toy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toy.h; sourceTree = "<group>"; };
+		792BFCD31710317F0085A306 /* Toy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toy.m; sourceTree = "<group>"; };
+		792BFCDD171036110085A306 /* NSObject+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSONKit.h"; sourceTree = "<group>"; };
+		792BFCDE171036110085A306 /* NSObject+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSONKit.m"; sourceTree = "<group>"; };
 		7969F7AF170D502A005224DE /* pedotoys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pedotoys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7969F7B3170D502A005224DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7969F7B5170D502A005224DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -243,8 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				7969FB53170D96C2005224DE /* README.md */,
-				7969F7B9170D502A005224DE /* pedotoys */,
 				7969FBAA170DFBB7005224DE /* ios-module */,
+				7969F7B9170D502A005224DE /* pedotoys */,
 				7969F7B2170D502A005224DE /* Frameworks */,
 				7969F7B0170D502A005224DE /* Products */,
 			);
@@ -274,7 +283,7 @@
 		7969F7B9170D502A005224DE /* pedotoys */ = {
 			isa = PBXGroup;
 			children = (
-				792BFCC31710238C0085A306 /* Items */,
+				792BFCCC17102C2F0085A306 /* Toys */,
 				7969FB8A170DF4BE005224DE /* Models */,
 				7969FB71170DB188005224DE /* ViewControllers */,
 				7969FB3E170D8DE1005224DE /* Resources */,
@@ -381,6 +390,10 @@
 				7969FBE3170E0707005224DE /* BaseModel.m */,
 				79909A9A170F1CEF0056CD96 /* PedoData.h */,
 				79909A9B170F1CEF0056CD96 /* PedoData.m */,
+				792BFCC917102AC20085A306 /* ToyCenter.h */,
+				792BFCCA17102AC20085A306 /* ToyCenter.m */,
+				792BFCD21710317F0085A306 /* Toy.h */,
+				792BFCD31710317F0085A306 /* Toy.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -388,6 +401,8 @@
 		7969FBAA170DFBB7005224DE /* ios-module */ = {
 			isa = PBXGroup;
 			children = (
+				792BFCDD171036110085A306 /* NSObject+JSONKit.h */,
+				792BFCDE171036110085A306 /* NSObject+JSONKit.m */,
 				79909A89170F0DAE0056CD96 /* AudioToolkit.h */,
 				79909A8A170F0DAE0056CD96 /* AudioToolkit.m */,
 				7969FBAB170DFBB7005224DE /* Http.h */,
@@ -579,7 +594,7 @@
 				792BFCBC17101BC10085A306 /* 11.png in Resources */,
 				792BFCBF17101DB10085A306 /* 09.png in Resources */,
 				792BFCC017101DB10085A306 /* 13.png in Resources */,
-				792BFCC41710238C0085A306 /* Items in Resources */,
+				792BFCCD17102C2F0085A306 /* Toys in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +634,9 @@
 				79909A7F170F08280056CD96 /* ToyView.m in Sources */,
 				79909A8B170F0DAE0056CD96 /* AudioToolkit.m in Sources */,
 				79909A9C170F1CEF0056CD96 /* PedoData.m in Sources */,
+				792BFCCB17102AC20085A306 /* ToyCenter.m in Sources */,
+				792BFCD41710317F0085A306 /* Toy.m in Sources */,
+				792BFCDF171036110085A306 /* NSObject+JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

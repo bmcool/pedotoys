@@ -9,12 +9,21 @@
 #import "AppDelegate.h"
 #import "OpenWeatherMap.h"
 
+#import "ToyCenter.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [OpenWeatherMap sharedInstance];
-    
+    Toy *toy = [[ToyCenter sharedInstance] getToyWithId:@"1"];
+    NSLog(@"123 %d", toy.stock);
+    [[ToyCenter sharedInstance] randomGenerateToy];
+    [[ToyCenter sharedInstance] randomGenerateToy];
+    [[ToyCenter sharedInstance] randomGenerateToy];
+    [[ToyCenter sharedInstance] randomGenerateToy];
+    toy = [[ToyCenter sharedInstance] randomGenerateToy];
+    NSLog(@"789 %d", toy.stock);
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
     
     return YES;

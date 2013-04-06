@@ -15,4 +15,12 @@
     [self removeFromSuperview];
 }
 
+- (void) updateLabelsWithToy:(Toy *)toy
+{
+    [self.titleLabel setText:toy.title];
+    [self.descriptionLabel setText:toy.description];
+    [self.stockLabel setText:[NSString stringWithFormat:@"%d", toy.stock]];
+    [self.imageView setImage:toy.iconImage];
+}
+
 @end

@@ -13,6 +13,9 @@
 #import "AudioToolkit.h"
 #import "PedoData.h"
 
+#import "ToyView.h"
+#import "ToyCenter.h"
+
 @interface PekoViewController ()
 
 @end
@@ -64,8 +67,9 @@
             [clickButton setEnabled:NO];
             [clickButton setBackgroundImage:[UIImage imageNamed:@"question_done"] forState:UIControlStateNormal];
             
-            UIView *toyView = [[[NSBundle mainBundle] loadNibNamed:@"ToyView" owner:self options:nil] objectAtIndex:0];
+            ToyView *toyView = [[[NSBundle mainBundle] loadNibNamed:@"ToyView" owner:self options:nil] objectAtIndex:0];
             [toyView setFrame:self.view.frame];
+            [toyView updateLabelsWithToy:[[ToyCenter sharedInstance] randomGenerateToy]];
             [self.view addSubview:toyView];
         }
     }

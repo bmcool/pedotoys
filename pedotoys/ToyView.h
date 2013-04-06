@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Toy.h"
 
 @interface ToyView : UIView
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stockLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+- (void) updateLabelsWithToy:(Toy *)toy;
 
 @end
