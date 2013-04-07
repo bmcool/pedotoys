@@ -1,39 +1,54 @@
 {
     "toys" : {
         "1" : {
-            "rarity" : 10,
+            "rarity" : 99.99,
             "title" : "",
-            "description" : "123"
+            "description" : "Spaceship"
         },
         "2" : {
-            "rarity" : 10,
+            "rarity" : 90,
             "title" : "",
-            "description" : "123"
+            "description" : "Airplane"
         },
         "3" : {
-            "rarity" : 10,
+            "rarity" : 30,
             "title" : "",
-            "description" : "123"
+            "description" : "Motorcycle"
         },
         "4" : {
-            "rarity" : 10,
+            "rarity" : 30,
             "title" : "",
-            "description" : "123"
+            "description" : "Bicycle"
         },
         "5" : {
-            "rarity" : 10,
+            "rarity" : 65,
             "title" : "",
-            "description" : "123"
+            "description" : "Boat"
         },
         "6" : {
-            "rarity" : 10,
+            "rarity" : 30,
             "title" : "",
-            "description" : "123"
+            "description" : "Bus"
         },
         "7" : {
-            "rarity" : 10,
+            "rarity" : 30,
             "title" : "",
-            "description" : "123"
-        }
+            "description" : "Car"
+        },
+        "8" : {
+            "rarity" : 90,
+            "title" : "",
+            "description" : "Cruises"
+        },
+        "9" : {
+            "rarity" : 90,
+            "title" : "",
+            "description" : "Helicopter"
+        },
+        "10" : {
+            "rarity" : 50,
+            "title" : "",
+            "description" : "Sailboat"
+        },
     }
 }
