@@ -136,17 +136,21 @@ static ToyCenter *sharedInstance;
     NSDictionary *toys = [self.config objectForKey:@"toys"];
     
     while (generateToyId == nil) {
-        for (NSString *toyId in toys) {
-            NSDictionary *toyConfig = [toys objectForKey:toyId];
-            NSNumber *rarity = [toyConfig objectForKey:@"rarity"];
-            
-            // 0 ~ 99.99
-            float randomNum = ((float)rand() / RAND_MAX) * 100;
-            NSLog(@"toyId = %@, [rarity floatValue] = %f, randomNum = %f", toyId, [rarity floatValue], randomNum);
-            if ([rarity floatValue] <= randomNum) {
-                generateToyId = toyId;
-            }
+        NSInteger randomToyId = ((float)rand() / RAND_MAX) * [toys count] + 1;
+//        NSLog(@"rtid = %d", randomToyId);
+        
+        NSString *toyId = [NSString stringWithFormat:@"%d", randomToyId];
+        
+        NSDictionary *toyConfig = [toys objectForKey:toyId];
+        NSNumber *rarity = [toyConfig objectForKey:@"rarity"];
+        
+        // 0 ~ 99.99
+        float randomNum = ((float)rand() / RAND_MAX) * 100;
+//        NSLog(@"toyId = %@, [rarity floatValue] = %f, randomNum = %f", toyId, [rarity floatValue], randomNum);
+        if ([rarity floatValue] <= randomNum) {
+            generateToyId = toyId;
         }
+        
     }
     [self incrToyStockWithId:generateToyId stock:1];
     

@@ -10,6 +10,7 @@
 #import "PedoData.h"
 
 #import "AudioToolkit.h"
+#import "OpenWeatherMap.h"
 
 @interface PedometerViewController ()
 
@@ -31,7 +32,21 @@
     [super viewDidLoad];
     
 	[self.shakeCountLabel setText:[NSString stringWithFormat:@"%d", self.shakeCount]];
-    [self.chanceLabel setText:[NSString stringWithFormat:@"%d", [[PedoData sharedInstance] chance]]];
+    
+    
+    
+    OpenWeatherMap *openWeatherMap = [OpenWeatherMap sharedInstance];
+    
+    NSInteger weatherChance = 0;
+    
+    NSString *icon = openWeatherMap.station.weather.icon;
+    if (icon != nil) {
+        weatherChance = [[icon substringToIndex:2] intValue];
+    }
+    
+    baseChance = [[PedoData sharedInstance] chance] + weatherChance;
+    [self.chanceLabel setText:[NSString stringWithFormat:@"%d", baseChance]];
+    
 }
 
 -(void) incrShakeCount
@@ -41,7 +56,7 @@
     // 1 ~ 100
     NSInteger randomNum = ((float)rand() / RAND_MAX) * 100 + 1;
     
-    NSInteger chance = [[PedoData sharedInstance] chance] + self.shakeCount / 100;
+    NSInteger chance = baseChance + self.shakeCount / 100;
     if (chance > 100) {
         chance = 100;
     }

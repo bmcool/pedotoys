@@ -34,26 +34,20 @@
     if ([openWeatherMap hasData]) {
         UIImage *iconImage;
         NSString *icon = openWeatherMap.station.weather.icon;
-        if ([icon isEqualToString:@"03d"] ||
-            [icon isEqualToString:@"03n"] ||
-            [icon isEqualToString:@"04d"] ||
-            [icon isEqualToString:@"04n"]) {
+        if ([icon rangeOfString:@"03"].location != NSNotFound ||
+            [icon rangeOfString:@"04"].location != NSNotFound) {
             iconImage = [UIImage imageNamed:@"0304"];
         
-        } else if ([icon isEqualToString:@"09d"] ||
-                   [icon isEqualToString:@"09n"]) {
+        } else if ([icon rangeOfString:@"09"].location != NSNotFound) {
             iconImage = [UIImage imageNamed:@"09"];
         
-        } else if ([icon isEqualToString:@"11d"] ||
-                   [icon isEqualToString:@"11n"]) {
+        } else if ([icon rangeOfString:@"11"].location != NSNotFound) {
             iconImage = [UIImage imageNamed:@"11"];
             
-        } else if ([icon isEqualToString:@"13d"] ||
-                   [icon isEqualToString:@"13n"]) {
+        } else if ([icon rangeOfString:@"13"].location != NSNotFound) {
             iconImage = [UIImage imageNamed:@"13"];
             
-        } else if ([icon isEqualToString:@"50d"] ||
-                   [icon isEqualToString:@"50n"]) {
+        } else if ([icon rangeOfString:@"50"].location != NSNotFound) {
             iconImage = [UIImage imageNamed:@"50"];
         
         } else {
@@ -61,7 +55,8 @@
         }
         [self.weatherIconImageView setImage:iconImage];
         
-        [self.weatherLabel setText:openWeatherMap.station.weather.description];
+        
+        [self.weatherLabel setText:[NSString stringWithFormat:@"%@ (+%@%%)", openWeatherMap.station.weather.description, [icon substringToIndex:2]]];
         [self.tempCLabel setText:[NSString stringWithFormat:@"%.1fC", openWeatherMap.station.tempC]];
         [self.tempFLabel setText:[NSString stringWithFormat:@"%.1fF", openWeatherMap.station.tempF]];
         [self.cityLabel setText:openWeatherMap.station.city];
