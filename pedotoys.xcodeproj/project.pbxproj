@@ -92,6 +92,8 @@
 		79909AA0170F2B940056CD96 /* step_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9F170F2B940056CD96 /* step_icon.png */; };
 		79996CBC17111A4400DE0F26 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79996CBB17111A4400DE0F26 /* 57x57.png */; };
 		79996CBE17111A6500DE0F26 /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79996CBD17111A6500DE0F26 /* 114x114.png */; };
+		79EFE009171194700057777F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EFE008171194700057777F /* QuartzCore.framework */; };
+		79EFE00B171194760057777F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EFE00A171194760057777F /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -215,6 +217,8 @@
 		79909A9F170F2B940056CD96 /* step_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_icon.png; sourceTree = "<group>"; };
 		79996CBB17111A4400DE0F26 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
 		79996CBD17111A6500DE0F26 /* 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114x114.png; sourceTree = "<group>"; };
+		79EFE008171194700057777F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		79EFE00A171194760057777F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79EFE00B171194760057777F /* CoreImage.framework in Frameworks */,
+				79EFE009171194700057777F /* QuartzCore.framework in Frameworks */,
 				79909A81170F0C320056CD96 /* AudioToolbox.framework in Frameworks */,
 				7969FB46170D8EA5005224DE /* CoreLocation.framework in Frameworks */,
 				7969FB44170D8E9A005224DE /* CoreMotion.framework in Frameworks */,
@@ -276,6 +282,8 @@
 		7969F7B2170D502A005224DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79EFE00A171194760057777F /* CoreImage.framework */,
+				79EFE008171194700057777F /* QuartzCore.framework */,
 				79909A80170F0C320056CD96 /* AudioToolbox.framework */,
 				7969FB45170D8EA5005224DE /* CoreLocation.framework */,
 				7969FB43170D8E9A005224DE /* CoreMotion.framework */,

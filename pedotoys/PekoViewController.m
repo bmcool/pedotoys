@@ -50,7 +50,7 @@
 - (IBAction)poke:(UIButton *)sender
 {
     clickButton = sender;
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You will spend 100 Pedo cash" message:@"Are you sure you want to poke?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You will spend 100 coins" message:@"Are you sure you want to poke?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
     [alert show];
 }
 
@@ -58,7 +58,7 @@
 {
     if (buttonIndex != alertView.cancelButtonIndex) {
         if ([[PedoData sharedInstance] money] < 100) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Your Pedo cash is not enough" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Your coin is not enough" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
         } else {
             [[PedoData sharedInstance] incrMoney:-100];
@@ -68,9 +68,15 @@
             [clickButton setBackgroundImage:[UIImage imageNamed:@"question_done"] forState:UIControlStateNormal];
             
             ToyView *toyView = [[[NSBundle mainBundle] loadNibNamed:@"ToyView" owner:self options:nil] objectAtIndex:0];
+            [toyView setAlpha:0.0];
             [toyView setFrame:self.view.frame];
             [toyView updateLabelsWithToy:[[ToyCenter sharedInstance] randomGenerateToy]];
             [self.view addSubview:toyView];
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:1];
+            [toyView setAlpha:1.0];
+            [UIView commitAnimations];
         }
     }
 }
