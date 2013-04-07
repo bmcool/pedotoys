@@ -2,37 +2,37 @@
     "toys" : {
         "1" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         },
         "2" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         },
         "3" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         },
         "4" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         },
         "5" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         },
         "6" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         },
         "7" : {
             "rarity" : 10,
-            "title" : "abc",
+            "title" : "",
             "description" : "123"
         }
     }

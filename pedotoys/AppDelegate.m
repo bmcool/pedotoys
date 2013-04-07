@@ -21,11 +21,6 @@
 //        [[ToyCenter sharedInstance] randomGenerateToy];
 //    }
     
-    if ([@"01n" rangeOfString:@"00"].location != NSNotFound) {
-        NSLog(@"1234");
-    } else {
-        NSLog(@"4444");
-    }
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
     
     return YES;

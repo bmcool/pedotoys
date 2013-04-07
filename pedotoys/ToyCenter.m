@@ -126,7 +126,11 @@ static ToyCenter *sharedInstance;
         stockNumber = [NSNumber numberWithInt:0];
     }
     
-    [toyData setValue:[NSNumber numberWithInt:([stockNumber intValue] + stock)] forKey:@"stock"];
+    NSInteger finalStock = [stockNumber intValue] + stock;
+    if (finalStock > 999) {
+        finalStock = 999;
+    }
+    [toyData setValue:[NSNumber numberWithInt:finalStock] forKey:@"stock"];
     [self writeToySaveDataWithId:toyId data:toyData];
 }
 
