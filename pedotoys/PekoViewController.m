@@ -67,16 +67,9 @@
             [clickButton setEnabled:NO];
             [clickButton setBackgroundImage:[UIImage imageNamed:@"question_done"] forState:UIControlStateNormal];
             
-            ToyView *toyView = [[[NSBundle mainBundle] loadNibNamed:@"ToyView" owner:self options:nil] objectAtIndex:0];
-            [toyView setAlpha:0.0];
-            [toyView setFrame:self.view.frame];
-            [toyView updateLabelsWithToy:[[ToyCenter sharedInstance] randomGenerateToy]];
-            [self.view addSubview:toyView];
+            Toy *toy = [[ToyCenter sharedInstance] randomGenerateToy];
             
-            [UIView beginAnimations:nil context:NULL];
-            [UIView setAnimationDuration:1];
-            [toyView setAlpha:1.0];
-            [UIView commitAnimations];
+            [ToyView showToy:toy inView:self.view];
         }
     }
 }

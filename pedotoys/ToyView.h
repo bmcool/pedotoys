@@ -18,4 +18,6 @@
 
 - (void) updateLabelsWithToy:(Toy *)toy;
 
++ (void) showToy:(Toy *)toy inView:(UIView *)view;
+
 @end

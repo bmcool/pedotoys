@@ -23,4 +23,18 @@
     [self.imageView setImage:toy.iconImage];
 }
 
++ (void) showToy:(Toy *)toy inView:(UIView *)view
+{
+    ToyView *toyView = [[[NSBundle mainBundle] loadNibNamed:@"ToyView" owner:self options:nil] objectAtIndex:0];
+    [toyView setAlpha:0.0];
+    [toyView setFrame:view.frame];
+    [toyView updateLabelsWithToy:toy];
+    [view addSubview:toyView];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1];
+    [toyView setAlpha:1.0];
+    [UIView commitAnimations];
+}
+
 @end

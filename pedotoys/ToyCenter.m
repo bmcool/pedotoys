@@ -98,7 +98,7 @@ static ToyCenter *sharedInstance;
     toy.id = toyId;
     toy.title = [toyConfig objectForKey:@"title"];
     toy.description = [toyConfig objectForKey:@"description"];
-    toy.iconImage = [UIImage imageNamed:[TOYS_PATH(self.main) stringByAppendingPathComponent:toyId]];
+    
     
     NSNumber *stockNumber = [[self getToySaveDataWithId:toyId] objectForKey:@"stock"];
     if (stockNumber == nil) {
@@ -107,6 +107,12 @@ static ToyCenter *sharedInstance;
     }
     
     toy.stock = [stockNumber intValue];
+    
+    if (toy.stock > 0) {
+        toy.iconImage = [UIImage imageNamed:[TOYS_PATH(self.main) stringByAppendingPathComponent:toyId]];
+    } else {
+        toy.iconImage = [UIImage imageNamed:@"unknown"];
+    }
     
     return toy;
 }
