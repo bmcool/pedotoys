@@ -90,6 +90,8 @@
 		79909A9C170F1CEF0056CD96 /* PedoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A9B170F1CEF0056CD96 /* PedoData.m */; };
 		79909A9E170F263C0056CD96 /* coin_spend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9D170F263C0056CD96 /* coin_spend.mp3 */; };
 		79909AA0170F2B940056CD96 /* step_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9F170F2B940056CD96 /* step_icon.png */; };
+		79996CBC17111A4400DE0F26 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79996CBB17111A4400DE0F26 /* 57x57.png */; };
+		79996CBE17111A6500DE0F26 /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79996CBD17111A6500DE0F26 /* 114x114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +213,8 @@
 		79909A9B170F1CEF0056CD96 /* PedoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoData.m; sourceTree = "<group>"; };
 		79909A9D170F263C0056CD96 /* coin_spend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin_spend.mp3; sourceTree = "<group>"; };
 		79909A9F170F2B940056CD96 /* step_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_icon.png; sourceTree = "<group>"; };
+		79996CBB17111A4400DE0F26 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
+		79996CBD17111A6500DE0F26 /* 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114x114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +255,8 @@
 		7969F7A4170D502A005224DE = {
 			isa = PBXGroup;
 			children = (
+				79996CBD17111A6500DE0F26 /* 114x114.png */,
+				79996CBB17111A4400DE0F26 /* 57x57.png */,
 				7969FB53170D96C2005224DE /* README.md */,
 				7969FBAA170DFBB7005224DE /* ios-module */,
 				7969F7B9170D502A005224DE /* pedotoys */,
@@ -595,6 +601,8 @@
 				792BFCBF17101DB10085A306 /* 09.png in Resources */,
 				792BFCC017101DB10085A306 /* 13.png in Resources */,
 				792BFCCD17102C2F0085A306 /* Toys in Resources */,
+				79996CBC17111A4400DE0F26 /* 57x57.png in Resources */,
+				79996CBE17111A6500DE0F26 /* 114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
