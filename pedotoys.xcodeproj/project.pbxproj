@@ -76,6 +76,7 @@
 		7969FBDB170DFBB7005224DE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBCB170DFBB7005224DE /* Weather.m */; };
 		7969FBE4170E0707005224DE /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969FBE3170E0707005224DE /* BaseModel.m */; };
 		7969FBED170E1E3B005224DE /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7969FBEC170E1E3B005224DE /* Defaults.plist */; };
+		79786BB217134155006A8B98 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79786BB117134155006A8B98 /* SettingViewController.m */; };
 		79909A5C170EA45A0056CD96 /* step_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A5B170EA45A0056CD96 /* step_stop.png */; };
 		79909A63170EBB5D0056CD96 /* finger_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A62170EBB5D0056CD96 /* finger_icon.png */; };
 		79909A68170EC6770056CD96 /* PekoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A67170EC6770056CD96 /* PekoViewController.m */; };
@@ -200,6 +201,8 @@
 		7969FBE2170E0707005224DE /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		7969FBE3170E0707005224DE /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		7969FBEC170E1E3B005224DE /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		79786BB017134155006A8B98 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		79786BB117134155006A8B98 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		79909A5B170EA45A0056CD96 /* step_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_stop.png; sourceTree = "<group>"; };
 		79909A62170EBB5D0056CD96 /* finger_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger_icon.png; sourceTree = "<group>"; };
 		79909A66170EC6770056CD96 /* PekoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PekoViewController.h; sourceTree = "<group>"; };
@@ -388,6 +391,8 @@
 				79909A67170EC6770056CD96 /* PekoViewController.m */,
 				79EFE01117119A010057777F /* ToysViewController.h */,
 				79EFE01217119A010057777F /* ToysViewController.m */,
+				79786BB017134155006A8B98 /* SettingViewController.h */,
+				79786BB117134155006A8B98 /* SettingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -675,6 +680,7 @@
 				792BFCD41710317F0085A306 /* Toy.m in Sources */,
 				792BFCDF171036110085A306 /* NSObject+JSONKit.m in Sources */,
 				79EFE01317119A010057777F /* ToysViewController.m in Sources */,
+				79786BB217134155006A8B98 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

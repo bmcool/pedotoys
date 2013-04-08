@@ -38,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QmG-U0-sa4">
-                                <rect key="frame" x="-340" y="-57" width="1000" height="666"/>
+                                <rect key="frame" x="-340" y="-59" width="1000" height="666"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
@@ -74,7 +74,7 @@
                     <connections>
                         <segue destination="daP-lb-C3r" kind="relationship" relationship="viewControllers" id="Vdp-F4-EUd"/>
                         <segue destination="ovk-Fh-crT" kind="relationship" relationship="viewControllers" id="zOe-SN-vxN"/>
-                        <segue destination="hBf-YM-B0V" kind="relationship" relationship="viewControllers" id="m7a-Di-W4V"/>
+                        <segue destination="hBf-YM-B0V" kind="relationship" relationship="viewControllers" id="Gu7-9L-yQI"/>
                         <segue destination="0bV-hr-Lrd" kind="relationship" relationship="viewControllers" id="ElC-Tg-GaN"/>
                     </connections>
                 </tabBarController>
@@ -387,40 +387,85 @@
             </objects>
             <point key="canvasLocation" x="1507" y="-897"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Setting View Controller - Settings-->
         <scene sceneID="ezt-ph-5xq">
             <objects>
-                <tableViewController id="7hD-Le-7d7" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ttx-0t-6aT">
+                <tableViewController id="7hD-Le-7d7" customClass="SettingViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ttx-0t-6aT">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="AsF-ps-YPM">
+                            <tableViewSection headerTitle="Pedometer" footerTitle="Pedometer will auto stop when over idle time" id="AsF-ps-YPM">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WVK-Zd-3jv">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FhX-ar-oUu">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Idle time (minutes)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bgl-fk-ZQ4">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="qh8-07-gZJ">
+                                                    <rect key="frame" x="203" y="7" width="77" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="1"/>
+                                                        <segment title="5"/>
+                                                        <segment title="10"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="idleTimeSegment:" destination="7hD-Le-7d7" eventType="valueChanged" id="H0Z-Mz-xPn"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xoX-ch-QeR">
-                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Poke" id="bQV-2V-anP">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="EM5-uy-rwq">
+                                        <rect key="frame" x="0.0" y="188" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Poke with asking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cuf-Lq-z4Z">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="MyG-2h-rxj">
+                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="pokeWithAskingSwitch:" destination="7hD-Le-7d7" eventType="valueChanged" id="41a-uH-xZx"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="About" footerTitle="Thanks for all" id="KTL-hx-FwD">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="EVi-ax-tyy">
+                                        <rect key="frame" x="0.0" y="280" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -429,11 +474,15 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="apy-Ey-EnE"/>
+                    <navigationItem key="navigationItem" title="Settings" id="apy-Ey-EnE"/>
+                    <connections>
+                        <outlet property="IdleTimeSegment" destination="qh8-07-gZJ" id="cHs-MJ-ocp"/>
+                        <outlet property="pokeWithAskingSwitch" destination="MyG-2h-rxj" id="h27-1f-oia"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sm-qu-TkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="1199"/>
+            <point key="canvasLocation" x="1512" y="1161"/>
         </scene>
         <!--Peko View Controller - Poke-->
         <scene sceneID="TdC-Tt-2Fg">
@@ -665,21 +714,30 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ccX-33-UOx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kyg-3W-c22">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Toys" image="box_icon.png" id="YCF-Pa-X8f"/>
+                    <navigationItem key="navigationItem" title="Toys" id="F5P-hi-PmL"/>
                     <connections>
+                        <outlet property="completionLabel" destination="kyg-3W-c22" id="SEn-UV-J0O"/>
                         <outlet property="scrollView" destination="ccX-33-UOx" id="wUp-bK-4sJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuv-9d-j1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="480"/>
+            <point key="canvasLocation" x="1088" y="471"/>
         </scene>
         <!--Navigation Controller - Setting-->
         <scene sceneID="Bk3-vk-2fC">
@@ -695,7 +753,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqz-jf-leW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="1199"/>
+            <point key="canvasLocation" x="1088" y="1161"/>
         </scene>
     </scenes>
     <resources>
@@ -728,12 +786,26 @@
         <class className="PedometerViewController" superclassName="ShakeViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PedometerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="getMoney:"/>
+                <relationship kind="action" name="stop:"/>
                 <relationship kind="outlet" name="chanceLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shakeCountLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="PekoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PekoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="poke:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SettingViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="idleTimeSegment:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="pokeWithAskingSwitch:" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="IdleTimeSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="pokeWithAskingSwitch" candidateClass="UISwitch"/>
+            </relationships>
         </class>
         <class className="ShakeViewController" superclassName="MotionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ShakeViewController.h"/>
@@ -744,9 +816,10 @@
                 <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="ToysViewController" superclassName="ViewController">
+        <class className="ToysViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ToysViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="completionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>

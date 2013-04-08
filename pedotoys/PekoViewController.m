@@ -16,6 +16,8 @@
 #import "ToyView.h"
 #import "ToyCenter.h"
 
+#define POKE_COST 50
+
 @interface PekoViewController ()
 
 @end
@@ -40,7 +42,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [self initQuestionButtons];
+}
+
+- (void) initQuestionButtons
+{
     [self.view setButtonsWithBlock:^(UIButton *btn) {
         [btn setBackgroundImage:[UIImage imageNamed:@"question"] forState:UIControlStateNormal];
     }];
@@ -50,28 +56,46 @@
 - (IBAction)poke:(UIButton *)sender
 {
     clickButton = sender;
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You will spend 100 coins" message:@"Are you sure you want to poke?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
-    [alert show];
+    
+    if ([[PedoData sharedInstance] money] < POKE_COST) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Your coin is not enough" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"You will spend %d coins", POKE_COST] message:@"Are you sure you want to poke?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"PokeWithAsking"]) {
+            [alert show];
+        } else {
+            [self alertView:alert clickedButtonAtIndex:1];
+        }
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex != alertView.cancelButtonIndex) {
-        if ([[PedoData sharedInstance] money] < 100) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Your coin is not enough" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        } else {
-            [[PedoData sharedInstance] incrMoney:-100];
-            [AudioToolkit playSound:@"coin_spend" ofType:@"mp3"];
-            
-            [clickButton setEnabled:NO];
-            [clickButton setBackgroundImage:[UIImage imageNamed:@"question_done"] forState:UIControlStateNormal];
-            
-            Toy *toy = [[ToyCenter sharedInstance] randomGenerateToy];
-            
-            [ToyView showToy:toy inView:self.view];
-        }
+        [[PedoData sharedInstance] incrMoney:-POKE_COST];
+        [AudioToolkit playSound:@"coin_spend" ofType:@"mp3"];
+        
+        [clickButton setEnabled:NO];
+        [clickButton setBackgroundImage:[UIImage imageNamed:@"question_done"] forState:UIControlStateNormal];
+        
+        Toy *toy = [[ToyCenter sharedInstance] randomGenerateToy];
+        ToyView *toyView = [ToyView showToy:toy inView:self.view];
+        toyView.delegate = self;
+        
+        closeTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(closeToyView:) userInfo:toyView repeats:NO];
     }
+}
+
+- (void)closeToyView:(NSTimer *)timer
+{
+    [timer.userInfo removeFromSuperview];
+}
+
+- (void) toyViewDidDisappear:(ToyView *)toyView
+{
+    [closeTimer invalidate];
+    [self initQuestionButtons];
 }
 
 - (void)didReceiveMemoryWarning

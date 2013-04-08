@@ -15,6 +15,12 @@
     [self removeFromSuperview];
 }
 
+- (void) removeFromSuperview
+{
+    [super removeFromSuperview];
+    [self.delegate toyViewDidDisappear:self];
+}
+
 - (void) updateLabelsWithToy:(Toy *)toy
 {
     [self.titleLabel setText:toy.title];
@@ -23,7 +29,7 @@
     [self.imageView setImage:toy.iconImage];
 }
 
-+ (void) showToy:(Toy *)toy inView:(UIView *)view
++ (ToyView *) showToy:(Toy *)toy inView:(UIView *)view
 {
     ToyView *toyView = [[[NSBundle mainBundle] loadNibNamed:@"ToyView" owner:self options:nil] objectAtIndex:0];
     [toyView setAlpha:0.0];
@@ -35,6 +41,8 @@
     [UIView setAnimationDuration:1];
     [toyView setAlpha:1.0];
     [UIView commitAnimations];
+    
+    return toyView;
 }
 
 @end

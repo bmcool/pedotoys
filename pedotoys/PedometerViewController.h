@@ -10,6 +10,10 @@
 
 @interface PedometerViewController : ShakeViewController<ShakeDelegate, UIAlertViewDelegate> {
     NSInteger baseChance;
+    
+    NSInteger pedoIdleTime;
+    
+    NSTimer *idleCheckTimer;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *shakeCountLabel;

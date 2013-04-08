@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Toy.h"
 
+@class ToyView;
+
+@protocol ToyViewDelegate <NSObject>
+
+- (void) toyViewDidDisappear:(ToyView *)toyView;
+
+@end
+
 @interface ToyView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -16,8 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *stockLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) id <ToyViewDelegate> delegate;
+
 - (void) updateLabelsWithToy:(Toy *)toy;
 
-+ (void) showToy:(Toy *)toy inView:(UIView *)view;
++ (ToyView *) showToy:(Toy *)toy inView:(UIView *)view;
 
 @end

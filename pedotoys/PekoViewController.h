@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToyView.h"
 
-@interface PekoViewController : UIViewController<UIAlertViewDelegate> {
+@interface PekoViewController : UIViewController<UIAlertViewDelegate, ToyViewDelegate> {
     UIButton *clickButton;
+    
+    NSTimer *closeTimer;
 }
 
 

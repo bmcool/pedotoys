@@ -75,18 +75,23 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self updateButtons];
+    [self updateViews];
 }
 
-- (void) updateButtons
+- (void) updateViews
 {
+    iconCount = 0;
     [self.scrollView setButtonsWithBlock:^(UIButton *btn) {
         Toy *toy = [toyCenter getToyWithId:[NSString stringWithFormat:@"%d", btn.tag]];
         if (toy.stock > 0) {
             [btn setEnabled:YES];
+            iconCount++;
         }
         [btn setBackgroundImage:toy.iconImage forState:UIControlStateNormal];
     }];
+    
+    NSInteger completion = iconCount * 100 / [[toyCenter.config objectForKey:@"toys"] count];
+    [self.completionLabel setText:[NSString stringWithFormat:@"%d %%", completion]];
 }
 
 - (void) showToy:(UIButton *)iconBtn

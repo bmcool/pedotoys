@@ -33,8 +33,6 @@
     
 	[self.shakeCountLabel setText:[NSString stringWithFormat:@"%d", self.shakeCount]];
     
-    
-    
     OpenWeatherMap *openWeatherMap = [OpenWeatherMap sharedInstance];
     
     NSInteger weatherChance = 0;
@@ -47,11 +45,26 @@
     baseChance = [[PedoData sharedInstance] chance] + weatherChance;
     [self.chanceLabel setText:[NSString stringWithFormat:@"%d", baseChance]];
     
+    
+    NSLog(@"");
+    
+    idleCheckTimer = [NSTimer scheduledTimerWithTimeInterval:[[NSUserDefaults standardUserDefaults] integerForKey:@"IdleTime"] target:self selector:@selector(stopPedometer) userInfo:nil repeats:NO];
+}
+
+- (void) viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [idleCheckTimer invalidate];
+    idleCheckTimer = nil;
 }
 
 -(void) incrShakeCount
 {
     [super incrShakeCount];
+    
+    [idleCheckTimer invalidate];
+    idleCheckTimer = [NSTimer scheduledTimerWithTimeInterval:[[NSUserDefaults standardUserDefaults] integerForKey:@"IdleTime"] target:self selector:@selector(stopPedometer) userInfo:nil repeats:NO];
     
     // 1 ~ 100
     NSInteger randomNum = ((float)rand() / RAND_MAX) * 100 + 1;
@@ -82,6 +95,11 @@
     if (buttonIndex != alertView.cancelButtonIndex) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+- (void) stopPedometer
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

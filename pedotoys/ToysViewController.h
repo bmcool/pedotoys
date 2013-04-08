@@ -12,8 +12,11 @@
 
 @interface ToysViewController : UIViewController {
     ToyCenter *toyCenter;
+    
+    NSInteger iconCount;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *completionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
