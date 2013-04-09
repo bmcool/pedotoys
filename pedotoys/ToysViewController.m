@@ -31,6 +31,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.shareButton.delegate = self;
+    
+    self.shareButton.shareMessage = @"Pedotoys share";
+    
+    self.shareButton.feedMessage = @"Pedotoys share";
+    
+    self.shareButton.lineMessage = @"Pedotoys share";
+    
+    self.shareButton.mailSubject = @"Pedotoys share";
+    self.shareButton.mailMessage = @"Pedotoys share";
+
 	toyCenter = [ToyCenter sharedInstance];
     NSDictionary *toys = [toyCenter.config objectForKey:@"toys"];
     

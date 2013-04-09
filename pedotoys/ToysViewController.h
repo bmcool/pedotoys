@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ToyCenter.h"
+#import "ShareButton.h"
 
 @interface ToysViewController : UIViewController {
     ToyCenter *toyCenter;
@@ -18,5 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *completionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet ShareButton *shareButton;
 
 @end
