@@ -8,10 +8,13 @@
 
 #import "ToysViewController.h"
 
+#import "PedoData.h"
+
 #import "ToyCenter.h"
 #import "ToyView.h"
 
 #import "UIView+Addition.h"
+#import "UIView+Screenshot.h"
 
 @interface ToysViewController ()
 
@@ -32,17 +35,6 @@
 {
     [super viewDidLoad];
     
-    self.shareButton.delegate = self;
-    
-    self.shareButton.shareMessage = @"Pedotoys share";
-    
-    self.shareButton.feedMessage = @"Pedotoys share";
-    
-    self.shareButton.lineMessage = @"Pedotoys share";
-    
-    self.shareButton.mailSubject = @"Pedotoys share";
-    self.shareButton.mailMessage = @"Pedotoys share";
-
 	toyCenter = [ToyCenter sharedInstance];
     NSDictionary *toys = [toyCenter.config objectForKey:@"toys"];
     
@@ -87,6 +79,14 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    self.shareButton.delegate = self;
+    
+    self.shareButton.shareMessage = [NSString stringWithFormat:@"Pedotoys shared :\nI got Coins : %d, Steps : %d", [[PedoData sharedInstance] money], [[PedoData sharedInstance] step]];
+    
+    self.shareButton.mailSubject = @"Pedotoys shared";
+    self.shareButton.mailMessage = [NSString stringWithFormat:@"I got Coins : %d, Steps : %d.", [[PedoData sharedInstance] money], [[PedoData sharedInstance] step]];
+    
     [self updateViews];
 }
 
@@ -110,6 +110,13 @@
 {
     Toy *toy = [toyCenter getToyWithId:[NSString stringWithFormat:@"%d", iconBtn.tag]];
     [ToyView showToy:toy inView:self.view];
+}
+
+-(void) shareButtonWillShare:(ShareButton *)shareButton
+{
+    shareButton.shareImage = self.view.screenshot;
+    
+    shareButton.mailImage = self.view.screenshot;
 }
 
 - (void)didReceiveMemoryWarning

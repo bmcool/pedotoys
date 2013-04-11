@@ -81,6 +81,9 @@
 		796BBF8B1714954100EDBC7A /* UIResponder+Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BBF8A1714954100EDBC7A /* UIResponder+Facebook.m */; };
 		796BBF8D17149B0C00EDBC7A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796BBF8C17149B0B00EDBC7A /* MessageUI.framework */; };
 		79786BB217134155006A8B98 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79786BB117134155006A8B98 /* SettingViewController.m */; };
+		7982EB2917168A5600582657 /* 35inch.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7982EB2617168A5600582657 /* 35inch.psd */; };
+		7982EB2A17168A5600582657 /* 4inch.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7982EB2717168A5600582657 /* 4inch.psd */; };
+		7982EB2B17168A5600582657 /* largeIcon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7982EB2817168A5600582657 /* largeIcon.psd */; };
 		79909A5C170EA45A0056CD96 /* step_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A5B170EA45A0056CD96 /* step_stop.png */; };
 		79909A63170EBB5D0056CD96 /* finger_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A62170EBB5D0056CD96 /* finger_icon.png */; };
 		79909A68170EC6770056CD96 /* PekoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A67170EC6770056CD96 /* PekoViewController.m */; };
@@ -95,6 +98,9 @@
 		79909A9C170F1CEF0056CD96 /* PedoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 79909A9B170F1CEF0056CD96 /* PedoData.m */; };
 		79909A9E170F263C0056CD96 /* coin_spend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9D170F263C0056CD96 /* coin_spend.mp3 */; };
 		79909AA0170F2B940056CD96 /* step_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79909A9F170F2B940056CD96 /* step_icon.png */; };
+		7996BA9F1715A00800085028 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996BA9E1715A00800085028 /* UIView+Screenshot.m */; };
+		7996BAA61715A03C00085028 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7996BAA51715A03C00085028 /* CoreImage.framework */; };
+		7996BAAD1715B47000085028 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996BAAC1715B47000085028 /* WeatherViewController.m */; };
 		79996CBC17111A4400DE0F26 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79996CBB17111A4400DE0F26 /* 57x57.png */; };
 		79996CBE17111A6500DE0F26 /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79996CBD17111A6500DE0F26 /* 114x114.png */; };
 		79AC330B1713BA24001F810D /* ShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AC33081713BA24001F810D /* ShareButton.m */; };
@@ -217,6 +223,9 @@
 		796BBF8C17149B0B00EDBC7A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		79786BB017134155006A8B98 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		79786BB117134155006A8B98 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		7982EB2617168A5600582657 /* 35inch.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = 35inch.psd; sourceTree = "<group>"; };
+		7982EB2717168A5600582657 /* 4inch.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4inch.psd; sourceTree = "<group>"; };
+		7982EB2817168A5600582657 /* largeIcon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = largeIcon.psd; sourceTree = "<group>"; };
 		79909A5B170EA45A0056CD96 /* step_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_stop.png; sourceTree = "<group>"; };
 		79909A62170EBB5D0056CD96 /* finger_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger_icon.png; sourceTree = "<group>"; };
 		79909A66170EC6770056CD96 /* PekoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PekoViewController.h; sourceTree = "<group>"; };
@@ -235,6 +244,11 @@
 		79909A9B170F1CEF0056CD96 /* PedoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoData.m; sourceTree = "<group>"; };
 		79909A9D170F263C0056CD96 /* coin_spend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin_spend.mp3; sourceTree = "<group>"; };
 		79909A9F170F2B940056CD96 /* step_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step_icon.png; sourceTree = "<group>"; };
+		7996BA9D1715A00800085028 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		7996BA9E1715A00800085028 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		7996BAA51715A03C00085028 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		7996BAAB1715B47000085028 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		7996BAAC1715B47000085028 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		79996CBB17111A4400DE0F26 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
 		79996CBD17111A6500DE0F26 /* 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114x114.png; sourceTree = "<group>"; };
 		79AC33071713BA24001F810D /* ShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareButton.h; sourceTree = "<group>"; };
@@ -256,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7996BAA61715A03C00085028 /* CoreImage.framework in Frameworks */,
 				796BBF8D17149B0C00EDBC7A /* MessageUI.framework in Frameworks */,
 				796BBF77171471E900EDBC7A /* FacebookSDK.framework in Frameworks */,
 				79AC332617141BEF001F810D /* libsqlite3.dylib in Frameworks */,
@@ -318,6 +333,7 @@
 		7969F7B2170D502A005224DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7996BAA51715A03C00085028 /* CoreImage.framework */,
 				796BBF8C17149B0B00EDBC7A /* MessageUI.framework */,
 				796BBF78171472BC00EDBC7A /* AdSupport.framework */,
 				796BBF76171471E900EDBC7A /* FacebookSDK.framework */,
@@ -383,6 +399,7 @@
 		7969FB3E170D8DE1005224DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7982EB2517168A5600582657 /* psd */,
 				79909A8D170F0DD90056CD96 /* Images */,
 				79909A8C170F0DCC0056CD96 /* Sounds */,
 			);
@@ -427,6 +444,8 @@
 				79EFE01217119A010057777F /* ToysViewController.m */,
 				79786BB017134155006A8B98 /* SettingViewController.h */,
 				79786BB117134155006A8B98 /* SettingViewController.m */,
+				7996BAAB1715B47000085028 /* WeatherViewController.h */,
+				7996BAAC1715B47000085028 /* WeatherViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -461,6 +480,8 @@
 		7969FBAA170DFBB7005224DE /* ios-module */ = {
 			isa = PBXGroup;
 			children = (
+				7996BA9D1715A00800085028 /* UIView+Screenshot.h */,
+				7996BA9E1715A00800085028 /* UIView+Screenshot.m */,
 				796BBF891714954100EDBC7A /* UIResponder+Facebook.h */,
 				796BBF8A1714954100EDBC7A /* UIResponder+Facebook.m */,
 				79AC33071713BA24001F810D /* ShareButton.h */,
@@ -525,6 +546,16 @@
 				7969FB57170D9BEB005224DE /* StepView.xib */,
 			);
 			name = StepView;
+			sourceTree = "<group>";
+		};
+		7982EB2517168A5600582657 /* psd */ = {
+			isa = PBXGroup;
+			children = (
+				7982EB2617168A5600582657 /* 35inch.psd */,
+				7982EB2717168A5600582657 /* 4inch.psd */,
+				7982EB2817168A5600582657 /* largeIcon.psd */,
+			);
+			path = psd;
 			sourceTree = "<group>";
 		};
 		79909A75170EE03B0056CD96 /* ToyView */ = {
@@ -675,6 +706,9 @@
 				79EFE00E171198870057777F /* box_icon.png in Resources */,
 				79EFE010171199CA0057777F /* setting_icon.png in Resources */,
 				79EFE0151711A2D00057777F /* unknown.png in Resources */,
+				7982EB2917168A5600582657 /* 35inch.psd in Resources */,
+				7982EB2A17168A5600582657 /* 4inch.psd in Resources */,
+				7982EB2B17168A5600582657 /* largeIcon.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +755,8 @@
 				79786BB217134155006A8B98 /* SettingViewController.m in Sources */,
 				79AC330B1713BA24001F810D /* ShareButton.m in Sources */,
 				796BBF8B1714954100EDBC7A /* UIResponder+Facebook.m in Sources */,
+				7996BA9F1715A00800085028 /* UIView+Screenshot.m in Sources */,
+				7996BAAD1715B47000085028 /* WeatherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +791,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -769,6 +806,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -782,7 +821,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CHI-CHENG LIN (W5CPSA45S2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CHI-CHENG LIN (W5CPSA45S2)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -790,6 +830,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "11E58605-6703-4476-B677-4A9EB9EE01E7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "11E58605-6703-4476-B677-4A9EB9EE01E7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

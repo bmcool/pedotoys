@@ -50,5 +50,155 @@
             "title" : "",
             "description" : "Sailboat"
         },
+        "11" : {
+            "rarity" : 30,
+            "title" : "",
+            "description" : "Apple"
+        },
+        "12" : {
+            "rarity" : 85,
+            "title" : "",
+            "description" : "Cherry"
+        },
+        "13" : {
+            "rarity" : 70,
+            "title" : "",
+            "description" : "Grapes"
+        },
+        "14" : {
+            "rarity" : 35,
+            "title" : "",
+            "description" : "Orange"
+        },
+        "15" : {
+            "rarity" : 35,
+            "title" : "",
+            "description" : "Banana"
+        },
+        "16" : {
+            "rarity" : 55,
+            "title" : "",
+            "description" : "Lemon"
+        },
+        "17" : {
+            "rarity" : 95,
+            "title" : "",
+            "description" : "Pineapple"
+        },
+        "18" : {
+            "rarity" : 10,
+            "title" : "",
+            "description" : "Pear"
+        },
+        "19" : {
+            "rarity" : 85,
+            "title" : "",
+            "description" : "Strawberry"
+        },
+        "20" : {
+            "rarity" : 5,
+            "title" : "",
+            "description" : "Tomato"
+        },
+        "21" : {
+            "rarity" : 70,
+            "title" : "",
+            "description" : "Bomb"
+        },
+        "22" : {
+            "rarity" : 88,
+            "title" : "",
+            "description" : "Gas mask"
+        },
+        "23" : {
+            "rarity" : 78,
+            "title" : "",
+            "description" : "Hospital"
+        },
+        "24" : {
+            "rarity" : 82,
+            "title" : "",
+            "description" : "Life preserver"
+        },
+        "25" : {
+            "rarity" : 95,
+            "title" : "",
+            "description" : "Medical alert"
+        },
+        "26" : {
+            "rarity" : 67,
+            "title" : "",
+            "description" : "Railroad tracks"
+        },
+        "27" : {
+            "rarity" : 5,
+            "title" : "",
+            "description" : "Recycle"
+        },
+        "28" : {
+            "rarity" : 70,
+            "title" : "",
+            "description" : "Stop lights"
+        },
+        "29" : {
+            "rarity" : 30,
+            "title" : "",
+            "description" : "Vest"
+        },
+        "30" : {
+            "rarity" : 66,
+            "title" : "",
+            "description" : "Wheelchair"
+        },
+        "31" : {
+            "rarity" : 90,
+            "title" : "",
+            "description" : "Accordian"
+        },
+        "32" : {
+            "rarity" : 92,
+            "title" : "",
+            "description" : "Clarinet"
+        },
+        "33" : {
+            "rarity" : 96,
+            "title" : "",
+            "description" : "Drum"
+        },
+        "34" : {
+            "rarity" : 88,
+            "title" : "",
+            "description" : "Guitar"
+        },
+        "35" : {
+            "rarity" : 95,
+            "title" : "",
+            "description" : "Harp"
+        },
+        "36" : {
+            "rarity" : 99,
+            "title" : "",
+            "description" : "Piano"
+        },
+        "37" : {
+            "rarity" : 91,
+            "title" : "",
+            "description" : "Sax"
+        },
+        "38" : {
+            "rarity" : 93,
+            "title" : "",
+            "description" : "Tamborine"
+        },
+        "39" : {
+            "rarity" : 92,
+            "title" : "",
+            "description" : "Trumpet"
+        },
+        "40" : {
+            "rarity" : 85,
+            "title" : "",
+            "description" : "Violin"
+        },
     }
 }

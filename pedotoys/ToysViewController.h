@@ -11,7 +11,7 @@
 #import "ToyCenter.h"
 #import "ShareButton.h"
 
-@interface ToysViewController : UIViewController {
+@interface ToysViewController : UIViewController<ShareButtonDelegate> {
     ToyCenter *toyCenter;
     
     NSInteger iconCount;
