@@ -44,3 +44,8 @@ Weather Service
 Sounds
 ------
 * http://www.soundjay.com/
+
+
+Disclaimer Of Liability
+-----------------------
+* Continued use of Pedometer in the background can dramatically decrease battery life. You can set shorter idle time in Settings.

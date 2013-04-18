@@ -528,7 +528,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Producer
+                                <mutableString key="text">Producer
 -----
 bmcool
 
@@ -565,9 +565,15 @@ Sounds
 http://www.soundjay.com/
 
 
+Disclaimer Of Liability
+-----
+Continued use of Pedometer in the background can dramatically decrease battery life. You can set shorter idle time in Settings.
+
+
+
 Thank you for all free resource. If I infringement, please let me know.
 
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -897,16 +903,23 @@ Thank you for all free resource. If I infringement, please let me know.
         <class className="PedometerViewController" superclassName="ShakeViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PedometerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="getMoney:"/>
+                <relationship kind="action" name="stop:"/>
                 <relationship kind="outlet" name="chanceLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shakeCountLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="PekoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PekoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="poke:" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="SettingViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
             <relationships>
+                <relationship kind="action" name="idleTimeSegment:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="pokeWithAskingSwitch:" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="IdleTimeSegment" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="pokeWithAskingSwitch" candidateClass="UISwitch"/>
             </relationships>
