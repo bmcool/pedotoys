@@ -69,7 +69,7 @@
     // 1 ~ 100
     NSInteger randomNum = ((float)rand() / RAND_MAX) * 100 + 1;
     
-    NSInteger chance = baseChance + self.shakeCount / 100;
+    NSInteger chance = baseChance + self.shakeCount / 10;
     if (chance > 100) {
         chance = 100;
     }

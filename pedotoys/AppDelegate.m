@@ -11,6 +11,8 @@
 
 #import "ToyCenter.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -22,6 +24,8 @@
 //    }
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
+    
+    [Crashlytics startWithAPIKey:@"6b07ab87009d5846af6c532cf8ad909b2167c4ec"];
     
     return YES;
 }

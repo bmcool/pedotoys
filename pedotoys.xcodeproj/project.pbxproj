@@ -108,6 +108,7 @@
 		79AC33101713BC64001F810D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC330F1713BC64001F810D /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		79AC33121713CDBF001F810D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC33111713CDBF001F810D /* Twitter.framework */; };
 		79AC332617141BEF001F810D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC332517141BEF001F810D /* libsqlite3.dylib */; };
+		79BABB09174FF1FF001E35AB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BABB08174FF1FF001E35AB /* Crashlytics.framework */; };
 		79EFE009171194700057777F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EFE008171194700057777F /* QuartzCore.framework */; };
 		79EFE00E171198870057777F /* box_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EFE00D171198870057777F /* box_icon.png */; };
 		79EFE010171199CA0057777F /* setting_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EFE00F171199CA0057777F /* setting_icon.png */; };
@@ -257,6 +258,7 @@
 		79AC330F1713BC64001F810D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		79AC33111713CDBF001F810D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		79AC332517141BEF001F810D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		79BABB08174FF1FF001E35AB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		79EFE008171194700057777F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		79EFE00D171198870057777F /* box_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box_icon.png; sourceTree = "<group>"; };
 		79EFE00F171199CA0057777F /* setting_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_icon.png; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				7969F7B4170D502A005224DE /* UIKit.framework in Frameworks */,
 				7969F7B6170D502A005224DE /* Foundation.framework in Frameworks */,
 				7969F7B8170D502A005224DE /* CoreGraphics.framework in Frameworks */,
+				79BABB09174FF1FF001E35AB /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +336,7 @@
 		7969F7B2170D502A005224DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79BABB08174FF1FF001E35AB /* Crashlytics.framework */,
 				7996BAA51715A03C00085028 /* CoreImage.framework */,
 				796BBF8C17149B0B00EDBC7A /* MessageUI.framework */,
 				796BBF78171472BC00EDBC7A /* AdSupport.framework */,
@@ -615,6 +619,7 @@
 				7969F7AB170D502A005224DE /* Sources */,
 				7969F7AC170D502A005224DE /* Frameworks */,
 				7969F7AD170D502A005224DE /* Resources */,
+				79BABB07174FF1DE001E35AB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -713,6 +718,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79BABB07174FF1DE001E35AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 6b07ab87009d5846af6c532cf8ad909b2167c4ec";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7969F7AB170D502A005224DE /* Sources */ = {
@@ -843,6 +864,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-module\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pedotoys/pedotoys-Prefix.pch";
@@ -858,6 +880,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-module\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pedotoys/pedotoys-Prefix.pch";
